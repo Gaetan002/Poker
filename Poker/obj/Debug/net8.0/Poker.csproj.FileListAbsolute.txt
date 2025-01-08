@@ -1,0 +1,14 @@
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\bin\Debug\net8.0\Poker.exe
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\bin\Debug\net8.0\Poker.deps.json
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\bin\Debug\net8.0\Poker.runtimeconfig.json
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\bin\Debug\net8.0\Poker.dll
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\bin\Debug\net8.0\Poker.pdb
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\obj\Debug\net8.0\Poker.GeneratedMSBuildEditorConfig.editorconfig
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\obj\Debug\net8.0\Poker.AssemblyInfoInputs.cache
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\obj\Debug\net8.0\Poker.AssemblyInfo.cs
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\obj\Debug\net8.0\Poker.csproj.CoreCompileInputs.cache
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\obj\Debug\net8.0\Poker.dll
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\obj\Debug\net8.0\refint\Poker.dll
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\obj\Debug\net8.0\Poker.pdb
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\obj\Debug\net8.0\Poker.genruntimeconfig.cache
+U:\Espace privé\Application professionnel\Ap 3 c# Jeux\Poker\Poker\Poker\obj\Debug\net8.0\ref\Poker.dll

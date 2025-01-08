@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "U:\\Espace priv\u00E9\\Application professionnel\\Ap 3 c# Jeux\\Poker\\Poker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1E7CC6BD-3F69-4148-A7FA-A284678785DB}|Poker\\Poker.csproj|u:\\espace priv\u00E9\\application professionnel\\ap 3 c# jeux\\poker\\poker\\poker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E7CC6BD-3F69-4148-A7FA-A284678785DB}|Poker\\Poker.csproj|solutionrelative:poker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "U:\\Espace priv\u00E9\\Application professionnel\\Ap 3 c# Jeux\\Poker\\Poker\\Poker\\Program.cs",
+              "RelativeDocumentMoniker": "Poker\\Program.cs",
+              "ToolTip": "U:\\Espace priv\u00E9\\Application professionnel\\Ap 3 c# Jeux\\Poker\\Poker\\Poker\\Program.cs",
+              "RelativeToolTip": "Poker\\Program.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAIwPwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T12:32:34.925Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
