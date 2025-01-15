@@ -68,7 +68,11 @@ namespace Poker
         // Retourne une expression de type "structure carte"
         public static Carte tirage()
         {
-
+            Random random = new Random();
+            Carte uneCarte = default(Carte);
+            uneCarte.valeur = valeurs[random.Next(0, valeurs.Length)];
+            uneCarte.famille = familles[random.Next(0, familles.Length)];
+            return uneCarte;
         }
 
         // Indique si une carte est déjà présente dans le jeu
