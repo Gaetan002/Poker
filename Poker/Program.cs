@@ -17,7 +17,7 @@ namespace Poker
         public static extern IntPtr GetStdHandle(uint nStdHandle);
         static uint STD_OUTPUT_HANDLE = 0xfffffff5;
         static IntPtr hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-        // Pour utiliser la fonction C 'getchar()' : sasie d'un caractère
+        // Pour utiliser la fonction C 'getchar()' : saisie d'un caractère
         [DllImport("msvcrt")]
         static extern int _getche();
 
@@ -29,24 +29,24 @@ namespace Poker
         public static bool fin = false;
 
         // Codes COULEUR
-        public enum couleur { VERT = 10, ROUGE = 12, JAUNE = 14, BLANC = 15, NOIRE = 0, ROUGESURBLANC = 252, NOIRESURBLANC = 240 };
+        public enum Couleur { VERT = 10, ROUGE = 12, JAUNE = 14, BLANC = 15, NOIRE = 0, ROUGESURBLANC = 252, NOIRESURBLANC = 240 };
 
         // Coordonnées pour l'affichage
-        public struct coordonnees
+        public struct Coordonnees
         {
             public int x;
             public int y;
         }
 
         // Une carte
-        public struct carte
+        public struct Carte
         {
             public char valeur;
             public int famille;
         };
 
         // Liste des combinaisons possibles
-        public enum combinaison { RIEN, PAIRE, DOUBLE_PAIRE, BRELAN, QUINTE, FULL, COULEUR, CARRE, QUINTE_FLUSH };
+        public enum Combinaison { RIEN, PAIRE, DOUBLE_PAIRE, BRELAN, QUINTE, FULL, COULEUR, CARRE, QUINTE_FLUSH };
 
         // Valeurs des cartes : As, Roi,...
         public static char[] valeurs = { 'A', 'R', 'D', 'V', 'X', '9', '8', '7', '6', '5', '4', '3', '2' };
@@ -58,7 +58,7 @@ namespace Poker
         public static int[] echange = { 0, 0, 0, 0 };
 
         // Jeu de 5 cartes
-        public static carte[] MonJeu = new carte[5];
+        public static Carte[] MonJeu = new Carte[5];
 
         //----------
         // FONCTIONS
@@ -66,7 +66,7 @@ namespace Poker
 
         // Génère aléatoirement une carte : {valeur;famille}
         // Retourne une expression de type "structure carte"
-        public static carte tirage()
+        public static Carte tirage()
         {
 
         }
@@ -74,7 +74,7 @@ namespace Poker
         // Indique si une carte est déjà présente dans le jeu
         // Paramètres : une carte, le jeu 5 cartes, le numéro de la carte dans le jeu
         // Retourne un entier (booléen)
-        public static bool carteUnique(carte uneCarte, carte[] unJeu, int numero)
+        public static bool carteUnique(Carte uneCarte, Carte[] unJeu, int numero)
         {
 
         }
@@ -82,14 +82,14 @@ namespace Poker
         // Calcule et retourne la COMBINAISON (paire, double-paire... , quinte-flush)
         // pour un jeu complet de 5 cartes.
         // La valeur retournée est un élement de l'énumération 'combinaison' (=constante)
-        public static combinaison chercheCombinaison(carte[] unJeu)
+        public static Combinaison chercheCombinaison(Carte[] unJeu)
         {
-
+            
         }
 
         // Echange des cartes
         // Paramètres : le tableau de 5 cartes et le tableau des numéros des cartes à échanger
-        private static void echangeCarte(carte[] unJeu, int[] e)
+        private static void echangeCarte(Carte[] unJeu, int[] e)
         {
 
 
@@ -98,7 +98,17 @@ namespace Poker
         // Pour afficher le Menu pricipale
         private static void afficheMenu()
         {
-
+            Console.WriteLine(
+                "\n|==============|\n" +
+                "|     MENU     |\n" +
+                "|==============|\n" +
+                "|  1 - Jouer   |\n" +
+                "|==============|\n" +
+                "|  2 - Score   |\n" +
+                "|==============|\n" +
+                "|  3 - Fin     |\n" +
+                "|==============|\n"
+            );
         }
 
         // Jouer au Poker
@@ -110,13 +120,13 @@ namespace Poker
 
         // Tirage d'un jeu de 5 cartes
         // Paramètre : le tableau de 5 cartes à remplir
-        private static void tirageDuJeu(carte[] unJeu)
+        private static void tirageDuJeu(Carte[] unJeu)
         {
 
         }
 
         // Affiche à l'écran une carte {valeur;famille} 
-        private static void affichageCarte(carte uneCarte)
+        private static void affichageCarte(Carte uneCarte)
         {
             //----------------------------
             // TIRAGE D'UN JEU DE 5 CARTES
@@ -130,9 +140,14 @@ namespace Poker
 
                 // Affichage de la carte
                 if (MonJeu[i].famille == 3 || MonJeu[i].famille == 4)
+                {
                     SetConsoleTextAttribute(hConsole, 252);
+                }
                 else
+                {
                     SetConsoleTextAttribute(hConsole, 240);
+                }
+
                 Console.SetCursorPosition(left, 5);
                 Console.Write("{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}\n", '*', '-', '-', '-', '-', '-', '-', '-', '-', '-', '*');
                 Console.SetCursorPosition(left, 6);
@@ -165,7 +180,7 @@ namespace Poker
         }
 
         // Enregistre le score dans le txt
-        private static void enregistrerJeu(carte[] unJeu)
+        private static void enregistrerJeu(Carte[] unJeu)
         {
 
         }
@@ -177,7 +192,7 @@ namespace Poker
         }
 
         // Affiche résultat
-        private static void afficheResultat(carte[] unJeu)
+        private static void afficheResultat(Carte[] unJeu)
         {
             SetConsoleTextAttribute(hConsole, 012);
             Console.Write("RESULTAT - Vous avez : ");
@@ -186,27 +201,30 @@ namespace Poker
                 // Test de la combinaison
                 switch (chercheCombinaison(ref MonJeu))
                 {
-                    case combinaison.RIEN:
+                    case Combinaison.RIEN:
                         Console.WriteLine("rien du tout... desole!"); break;
-                    case combinaison.PAIRE:
+                    case Combinaison.PAIRE:
                         Console.WriteLine("une simple paire..."); break;
-                    case combinaison.DOUBLE_PAIRE:
+                    case Combinaison.DOUBLE_PAIRE:
                         Console.WriteLine("une double paire; on peut esperer..."); break;
-                    case combinaison.BRELAN:
+                    case Combinaison.BRELAN:
                         Console.WriteLine("un brelan; pas mal..."); break;
-                    case combinaison.QUINTE:
+                    case Combinaison.QUINTE:
                         Console.WriteLine("une quinte; bien!"); break;
-                    case combinaison.FULL:
+                    case Combinaison.FULL:
                         Console.WriteLine("un full; ouahh!"); break;
-                    case combinaison.COULEUR:
+                    case Combinaison.COULEUR:
                         Console.WriteLine("une couleur; bravo!"); break;
-                    case combinaison.CARRE:
+                    case Combinaison.CARRE:
                         Console.WriteLine("un carre; champion!"); break;
-                    case combinaison.QUINTE_FLUSH:
+                    case Combinaison.QUINTE_FLUSH:
                         Console.WriteLine("une quinte-flush; royal!"); break;
                 };
             }
-            catch { }
+            catch
+            { 
+
+            }
         }
 
 
@@ -237,12 +255,14 @@ namespace Poker
                         int i = 0;
                         jouerAuPoker();
                     }
-
                     if (reponse == '2')
+                    {
                         voirScores();
-
+                    }
                     if (reponse == '3')
+                    {
                         break;
+                    }
                 }
             }
             Console.Clear();
