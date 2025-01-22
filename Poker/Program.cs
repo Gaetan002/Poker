@@ -80,7 +80,19 @@ namespace Poker
         // Retourne un entier (booléen)
         public static bool carteUnique(Carte uneCarte, Carte[] unJeu, int numero)
         {
+            numero = uneCarte.valeur;
 
+            if (numero >= unJeu[0].valeur && numero>= unJeu[5].valeur)
+            {
+
+                Console.WriteLine("La carte est déjà présente dans le jeu.");
+                return false;
+            }
+            else
+            {
+                Console.WriteLine("La carte est actuellement unique au jeu présent.");
+                return true;
+            }
         }
 
         // Calcule et retourne la COMBINAISON (paire, double-paire... , quinte-flush)
