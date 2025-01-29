@@ -83,7 +83,7 @@ namespace Poker
         {
             numero = uneCarte.valeur;
 
-            if (numero >= unJeu[0].valeur && numero>= unJeu[5].valeur)
+            if (numero == unJeu[0].valeur && numero== unJeu[1].valeur && numero == unJeu[2].valeur && numero == unJeu[3].valeur && numero == unJeu[4].valeur)
             {
 
                 Console.WriteLine("La carte est déjà présente dans le jeu.");
@@ -281,6 +281,8 @@ namespace Poker
                     }
                     if (reponse == '3')
                     {
+                        Console.WriteLine("Vous allez quitter le programme.");
+                        Thread.Sleep(3000);
                         break;
                     }
                 }
