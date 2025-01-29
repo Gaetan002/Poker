@@ -2,6 +2,7 @@
 using System.IO;
 using System.Text;
 using System.Runtime.InteropServices;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Poker
 {
@@ -131,7 +132,10 @@ namespace Poker
         // Ici que vous appellez toutes les fonction permettant de joueur au poker
         private static void jouerAuPoker()
         {
-
+            tirage();
+            affichageCarte();
+            carteUnique();
+            chercheCombinaison();
         }
 
         // Tirage d'un jeu de 5 cartes
