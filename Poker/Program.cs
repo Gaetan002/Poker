@@ -101,7 +101,34 @@ namespace Poker
         // La valeur retournée est un élement de l'énumération 'combinaison' (=constante)
         public static Combinaison chercheCombinaison(Carte[] unJeu)
         {
-            
+            // Combinaison d'une famille
+            for (int i = 0; i < unJeu.Length; i++)
+            {
+                for (int j = 1; j < unJeu.Length; i++)
+                {
+                    if (unJeu[i].famille == unJeu[j].famille)
+                    {
+
+                    }
+                }
+            }
+
+            // Combinaison d'une valeur
+            int nbpaire = 0;
+            for(int i = 0; i < unJeu.Length; i++)
+            {
+                for (int j = 1; j < unJeu.Length; i++)
+                {
+                    if (unJeu[i].valeur == unJeu[j].valeur)
+                    {
+                        nbpaire += 1;
+                    } 
+                }
+            }
+            if (nbpaire == 2)
+            {
+                return Combinaison.DOUBLE_PAIRE;
+            }
         }
 
         // Echange des cartes
